@@ -6,8 +6,6 @@ This project was inspired by the need for low-latency, scalable trading systems 
 
 ## Key Features
 - Concurrent order matching using goroutines and channels.
-- REST API for order submission and status queries ([View commit](https://github.com/alextaylor/order-book-simulator/commit/<hash>)).
-- Deployed on AWS with 99.9% uptime ([View deployment script](https://github.com/alextaylor/order-book-simulator/blob/main/deploy.sh)).
 - Thread-safe order book updates with `sync.Mutex`.
 
 ## Tech Stack
