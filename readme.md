@@ -1,6 +1,6 @@
 # Market Data Feed Handler (C++)
 
-A high-performance C++-based market data feed handler for high-frequency trading (HFT), processing 1M+ ticks/sec with <500ns latency. Utilizes lock-free queues, zero-copy JSON parsing, and an in-memory order book with `std::priority_queue` and `boost::asio`. Deployed on AWS EC2 with Docker for 99.99% uptime.
+A high-performance C++-based market data feed handler for high-frequency trading (HFT), processing 1M+ ticks/sec with <500ns latency. Utilizes lock-free queues, zero-copy JSON parsing, and an in-memory order book with `std::priority_queue` and `boost::asio`.
 
 ## Prerequisites
 - **OS**: macOS (tested on macOS Ventura)
@@ -85,9 +85,6 @@ Unit tests for the `matchOrders()` method verify basic matching, partial matches
   docker build -t market-data-feed-cpp .
   docker run -p 8080:8080 market-data-feed-cpp
   ```
-- **AWS EC2**:
-  - Push to ECR: Update `deploy.sh` with your AWS credentials and run `./deploy.sh`.
-  - Deploy using ECS or EC2 instance.
 
 ## Project Structure
 ```
